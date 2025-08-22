@@ -1,6 +1,8 @@
 package com.mobile.be.webhookwhatsappinfobipjava.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.mobile.be.webhookwhatsappinfobipjava.dto.enums.ErrorGroupName;
+import com.mobile.be.webhookwhatsappinfobipjava.dto.enums.StatusGroupName;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
@@ -31,7 +33,6 @@ public class MessageStatusCallback {
         String applicationId;
         String entityId;
 
-
         @Data
         @JsonIgnoreProperties(ignoreUnknown = true)
         public static class Price {
@@ -43,7 +44,7 @@ public class MessageStatusCallback {
         @FieldDefaults(level = AccessLevel.PRIVATE)
         @JsonIgnoreProperties(ignoreUnknown = true)
         public static class Status {
-            String groupName;
+            StatusGroupName groupName;
             Integer id;
             Integer groupId;
             String name;
@@ -57,7 +58,7 @@ public class MessageStatusCallback {
         public static class Error {
             String description;
             Boolean permanent;
-            String name;
+            ErrorGroupName name;
             Integer id;
             String groupName;
             Integer groupId;

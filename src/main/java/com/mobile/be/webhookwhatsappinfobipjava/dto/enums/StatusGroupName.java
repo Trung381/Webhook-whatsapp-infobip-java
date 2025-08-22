@@ -8,7 +8,7 @@ public enum StatusGroupName implements BaseEnum<String> {
     UNDELIVERABLE("UNDELIVERABLE"),
     DELIVERED("DELIVERED"),
     EXPIRED("EXPIRED"),
-    Rejected("REJECTED");
+    REJECTED("REJECTED");
 
 
     private final String value;

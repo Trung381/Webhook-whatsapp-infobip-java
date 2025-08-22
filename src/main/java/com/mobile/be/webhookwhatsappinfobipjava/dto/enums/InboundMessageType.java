@@ -1,5 +1,8 @@
 package com.mobile.be.webhookwhatsappinfobipjava.dto.enums;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.mobile.be.webhookwhatsappinfobipjava.dto.constant.BaseEnum;
+
 public enum InboundMessageType implements BaseEnum<String> {
     UNSUPPORTED("UNSUPPORTED"),
     TEXT("TEXT"),

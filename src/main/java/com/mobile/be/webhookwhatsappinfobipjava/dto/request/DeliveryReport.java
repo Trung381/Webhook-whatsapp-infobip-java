@@ -1,7 +1,8 @@
 package com.mobile.be.webhookwhatsappinfobipjava.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.validation.Valid;
+import com.mobile.be.webhookwhatsappinfobipjava.dto.enums.ErrorGroupName;
+import com.mobile.be.webhookwhatsappinfobipjava.dto.enums.StatusGroupName;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -44,7 +45,7 @@ public class DeliveryReport {
         @RequiredArgsConstructor
         @JsonIgnoreProperties(ignoreUnknown = true)
         public static class Status {
-            private String groupName;
+            private StatusGroupName groupName;
             private Integer id;
             private Integer groupId;
             private String name;
@@ -59,7 +60,7 @@ public class DeliveryReport {
         public static class ErrorRes {
             private String description;
             private Boolean permanent;
-            private String name;
+            private ErrorGroupName name;
             private Integer id;
             private String groupName;
             private Integer groupId;

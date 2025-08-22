@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -45,7 +46,7 @@ public class InboundReq {
         private String integrationType;
 
         @NotBlank
-        private String receivedAt;
+        private Date receivedAt;
 
         private String keyword;
 
@@ -132,7 +133,7 @@ public class InboundReq {
             @NotBlank
             private String hash;
             @NotBlank
-            private String createdAt;
+            private Date createdAt;
         }
     }
 }
